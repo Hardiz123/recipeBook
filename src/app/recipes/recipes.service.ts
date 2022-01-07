@@ -13,8 +13,8 @@ export class RecipeService {
     new Recipe(
       'Tasty Schnitzel',
       'A super-tasty Schnitzel - just awesome',
-      'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=300,272'
-      ,[
+      'https://toriavey.com/images/2011/02/TOA20_03-740x740.jpg',
+      [
         new Ingredient('Meat',1),
         new Ingredient('French Fries', 20)
       ]
@@ -22,8 +22,8 @@ export class RecipeService {
     new Recipe(
       'Big Fat Burger',
       'What else you need to say',
-      'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=300,272'
-      ,[
+      'https://www.eatthis.com/wp-content/uploads/sites/4/2018/02/xxxl-fatburger.jpg?quality=82&strip=1&resize=640%2C360',
+      [
         new Ingredient('Buns', 2),
         new Ingredient('Meat', 1)
       ]
