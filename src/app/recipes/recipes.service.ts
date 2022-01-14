@@ -9,28 +9,34 @@ export class RecipeService {
   // recipeSelected = new EventEmitter<Recipe>();
   // recipeSelected = new Subject<Recipe>();
   recipesChanged = new Subject<Recipe[]>();
-  private recipes: Recipe[] = [
-    new Recipe(
-      'Tasty Schnitzel',
-      'A super-tasty Schnitzel - just awesome',
-      'https://toriavey.com/images/2011/02/TOA20_03-740x740.jpg',
-      [
-        new Ingredient('Meat',1),
-        new Ingredient('French Fries', 20)
-      ]
-    ),
-    new Recipe(
-      'Big Fat Burger',
-      'What else you need to say',
-      'https://www.eatthis.com/wp-content/uploads/sites/4/2018/02/xxxl-fatburger.jpg?quality=82&strip=1&resize=640%2C360',
-      [
-        new Ingredient('Buns', 2),
-        new Ingredient('Meat', 1)
-      ]
-    ),
-  ];
+  // private recipes: Recipe[] = [
+  //   new Recipe(
+  //     'Tasty Schnitzel',
+  //     'A super-tasty Schnitzel - just awesome',
+  //     'https://toriavey.com/images/2011/02/TOA20_03-740x740.jpg',
+  //     [
+  //       new Ingredient('Meat',1),
+  //       new Ingredient('French Fries', 20)
+  //     ]
+  //   ),
+  //   new Recipe(
+  //     'Big Fat Burger',
+  //     'What else you need to say',
+  //     'https://www.eatthis.com/wp-content/uploads/sites/4/2018/02/xxxl-fatburger.jpg?quality=82&strip=1&resize=640%2C360',
+  //     [
+  //       new Ingredient('Buns', 2),
+  //       new Ingredient('Meat', 1)
+  //     ]
+  //   ),
+  // ];
+  private recipes: Recipe[] = [];
 
   constructor(private slService: ShoppingListService) {}
+
+  setRecipes(recipes: Recipe[]) {
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice());
+  }
 
   getRecipes() {
     return this.recipes.slice();
