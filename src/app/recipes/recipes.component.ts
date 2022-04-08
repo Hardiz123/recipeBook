@@ -19,7 +19,7 @@ export class RecipesComponent implements OnInit {
     // (recipe:Recipe) => {
     //   this.selectedRecipe = recipe;
     // });
-    this.dataStorageSerive.fetchRecipes().subscribe();
+    // this.dataStorageSerive.fetchRecipes().subscribe();
   }
 
 }
